@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 20% 3%;
+    --foreground: 210 15% 90%;
+    --card: 120 15% 6%;
+    --card-foreground: 210 15% 90%;
+    --popover: 120 15% 6%;
+    --popover-foreground: 210 15% 90%;
+    --primary: 141 69% 58%;
+    --primary-foreground: 120 20% 3%;
+    --secondary: 120 40% 15%;
+    --secondary-foreground: 210 15% 90%;
+    --muted: 120 10% 12%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 120 40% 15%;
+    --accent-foreground: 210 15% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 15% 15%;
+    --input: 120 15% 15%;
+    --ring: 141 69% 58%;
+    --chart-1: 141 69% 58%;
+    --chart-2: 140 58% 39%;
+    --chart-3: 120 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+    --font-heading: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 120 15% 6%;
+    --sidebar-foreground: 210 15% 90%;
+    --sidebar-primary: 141 69% 58%;
+    --sidebar-primary-foreground: 120 20% 3%;
+    --sidebar-accent: 120 15% 12%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 120 15% 15%;
+    --sidebar-ring: 141 69% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px hsl(141 69% 58% / 0.3), 0 0 40px hsl(141 69% 58% / 0.1);
+  }
+  .vitality-glow {
+    box-shadow: 0 0 30px hsl(141 69% 58% / 0.15), 0 0 60px hsl(141 69% 58% / 0.05);
+  }
+  .glass-card {
+    background: hsl(120 15% 8% / 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(120 15% 20% / 0.3);
+  }
+}
