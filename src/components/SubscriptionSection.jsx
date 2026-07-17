@@ -107,7 +107,7 @@ export default function SubscriptionSection() {
               </ul>
 
               <a
-                href="https://wa.me/79961730229?text=Здравствуйте!%20Интересует%20подписка%20на%20микрозелень"
+                href="https://max.ru/u/f9LHodD0cOIgzB8PPL16ZxpD0Y7ELbSgqEq1YACHDjq1JYxWPcHdNrKm1-I"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-3.5 text-center font-heading font-bold uppercase tracking-wider rounded-full transition-all duration-500 text-sm ${

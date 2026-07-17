@@ -93,7 +93,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                   <span className="font-body text-2xl font-bold text-foreground">{total} ₽</span>
                 </div>
                 <a
-                  href="https://wa.me/79961730229?text=Здравствуйте!%20Хочу%20заказать%20микрозелень"
+                  href="https://max.ru/u/f9LHodD0cOIgzB8PPL16ZxpD0Y7ELbSgqEq1YACHDjq1JYxWPcHdNrKm1-I"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 bg-lime-electric text-forest-deep font-heading font-bold text-center uppercase tracking-wider rounded-full hover:shadow-[0_0_40px_rgba(200,255,0,0.3)] transition-all duration-500"

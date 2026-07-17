@@ -90,14 +90,39 @@ module.exports = {
   			'pulse-glow': {
   				'0%, 100%': { opacity: '0.4' },
   				'50%': { opacity: '1' }
+  			},
+  			'leaf-sway': {
+  				'0%, 100%': { transform: 'rotate(-3deg) translate(-2px, -1px)' },
+  				'50%': { transform: 'rotate(3deg) translate(2px, 1px)' }
+  			},
+  			'dew-drip': {
+  				'0%, 38%': { opacity: '1', transform: 'translate(0px, 0px) scale(1)' },
+  				'44%': { opacity: '1', transform: 'translate(0px, 4px) scaleY(1.18) scaleX(0.88)' },
+  				'52%': { opacity: '1', transform: 'translate(0px, 20px) scaleY(1.2) scaleX(0.85)' },
+  				'62%': { opacity: '0.8', transform: 'translate(0px, 80px) scale(0.7)' },
+  				'72%': { opacity: '0', transform: 'translate(0px, 140px) scale(0.55)' },
+  				'80%': { opacity: '0', transform: 'translate(0px, 0px) scale(1)' },
+  				'88%, 100%': { opacity: '1', transform: 'translate(0px, 0px) scale(1)' }
+  			},
+  			'dew-breathe': {
+  				'0%, 100%': { transform: 'scale(1)' },
+  				'50%': { transform: 'scale(1.03)' }
+  			},
+  			'dew-shimmer': {
+  				'0%, 100%': { opacity: '0.45', transform: 'translate(-15%, -15%) scale(1)' },
+  				'50%': { opacity: '1', transform: 'translate(10%, 5%) scale(1.15)' }
   			}
-  		},
-  		animation: {
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'float': 'float 6s ease-in-out infinite',
-  			'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
-  		}
+  			},
+  			animation: {
+  				'accordion-down': 'accordion-down 0.2s ease-out',
+  				'accordion-up': 'accordion-up 0.2s ease-out',
+  				'float': 'float 6s ease-in-out infinite',
+  				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+  				'leaf-sway': 'leaf-sway 7s ease-in-out infinite',
+  				'dew-drip': 'dew-drip 8s ease-in-out infinite',
+  				'dew-breathe': 'dew-breathe 10s ease-in-out infinite',
+  				'dew-shimmer': 'dew-shimmer 4s ease-in-out infinite'
+  			}
   	}
   },
   plugins: [require("tailwindcss-animate")],

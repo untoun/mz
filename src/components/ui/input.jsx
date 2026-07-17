@@ -1,19 +1,28 @@
 import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Minus } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const Input = React.forwardRef(({ className, type, ...props }, ref) => {
-  return (
-    (<input
-      type={type}
-      className={cn(
-        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        className
-      )}
-      ref={ref}
-      {...props} />)
-  );
-})
-Input.displayName = "Input"
+const InputOTP = React.forwardRef(({ className, containerClassName, ...props }, ref) => (
+  <OTPInput
+    ref={ref}
+    containerClassName={cn("flex items-center gap-2 has-[:disabled]:opacity-50", containerClassName)}
+    className={cn("disabled:cursor-not-allowed", className)}
+    {...props} />
+))
+InputOTP.displayName = "InputOTP"
 
-export { Input }
+const InputOTPGroup = React.forwardRef(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("flex items-center", className)} {...props} />
+))
+InputOTPGroup.displayName = "InputOTPGroup"
+
+const InputOTPSlot = React.forwardRef(({ index, className, ...props }, ref) => {
+  const inputOTPContext = React.useContext(OTPInputContext)
+  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
+
+  return (
+    (<div
+      ref={ref}
+      className={cn(

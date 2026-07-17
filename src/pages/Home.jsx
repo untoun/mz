@@ -7,6 +7,7 @@ import CartDrawer from "@/components/CartDrawer";
 import DeliverySection from "@/components/DeliverySection";
 import SubscriptionSection from "@/components/SubscriptionSection";
 import FAQSection from "@/components/FAQSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import QuickOrderForm from "@/components/QuickOrderForm";
 import FooterSection from "@/components/FooterSection";
 
@@ -44,7 +45,7 @@ export default function Home() {
   const cartCount = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   return (
-    <div className="min-h-screen bg-forest-deep">
+    <div className="min-h-screen bg-forest-deep overflow-x-hidden">
       <Navbar cartCount={cartCount} onCartClick={() => setCartOpen(true)} />
       <HeroSection />
       <AboutSection />
@@ -52,6 +53,7 @@ export default function Home() {
       <DeliverySection />
       <SubscriptionSection />
       <FAQSection />
+      <ReviewsSection />
       <QuickOrderForm />
       <FooterSection />
       <CartDrawer

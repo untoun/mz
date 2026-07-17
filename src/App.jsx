@@ -26,35 +26,3 @@ const AuthenticatedApp = () => {
     if (authError.type === 'user_not_registered') {
       return <UserNotRegisteredError />;
     } else if (authError.type === 'auth_required') {
-      // Redirect to login automatically
-      navigateToLogin();
-      return null;
-    }
-  }
-
-  // Render the main app
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
-  );
-};
-
-
-function App() {
-
-  return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
-        <Router>
-          <ScrollToTop />
-          <AuthenticatedApp />
-        </Router>
-        <Toaster />
-      </QueryClientProvider>
-    </AuthProvider>
-  )
-}
-
-export default App

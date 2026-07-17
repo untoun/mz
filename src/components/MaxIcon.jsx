@@ -19,8 +19,8 @@ export default function MaxIcon({ className = "" }) {
       />
       <defs>
         <linearGradient id="maxGrad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-          <stop stopColor=" #8B5CF6" />
-          <stop offset="1" stopColor=" #6D28D9" />
+          <stop stopColor="#8B5CF6" />
+          <stop offset="1" stopColor="#6D28D9" />
         </linearGradient>
       </defs>
     </svg>

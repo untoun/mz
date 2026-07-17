@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, Instagram, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import MaxIcon from "@/components/MaxIcon";
 
 export default function FooterSection() {
@@ -72,12 +72,12 @@ export default function FooterSection() {
               <Instagram className="w-4 h-4" />
             </a>
             <a
-              href="https://t.me/"
+              href="https://max.ru/channel_microfresh"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-lime-electric/20 hover:text-lime-electric transition-all"
             >
-              <Send className="w-4 h-4" />
+              <MaxIcon className="w-4 h-4" />
             </a>
           </div>
         </div>

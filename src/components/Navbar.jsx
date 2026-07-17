@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: "Каталог", href: "#catalog" },
   { label: "Доставка", href: "#delivery" },
   { label: "Подписка", href: "#subscription" },
+  { label: "Отзывы", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
   { label: "Контакты", href: "#contacts" },
 ];

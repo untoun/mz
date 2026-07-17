@@ -103,7 +103,7 @@ export default function CatalogSection({ onAddToCart }) {
     : PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="catalog" className="py-24 md:py-32 relative">
+    <section id="catalog" className="py-24 md:py-32 relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-lime-electric/3 rounded-full blur-[180px]" />
 
       <div className="max-w-7xl mx-auto px-5">

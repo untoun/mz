@@ -7,13 +7,41 @@ const HERO_IMAGE = "https://media.base44.com/images/public/6a5316ed0f20d00f5bb09
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={HERO_IMAGE}
-          alt="Макро-съёмка ростков микрозелени с каплями росы"
-          className="w-full h-full object-cover"
-        />
+      {/* Background image with living leaf animation */}
+      <div className="absolute inset-0 group">
+        {/* Hover layer: extra tilt that eases in/out */}
+        <div className="absolute inset-0 transition-transform duration-1000 ease-out group-hover:rotate-[2.5deg] group-hover:-translate-x-1 group-hover:-translate-y-0.5">
+          {/* Gentle continuous leaf sway */}
+          <div className="absolute inset-0 animate-leaf-sway origin-top">
+            <img
+              src={HERO_IMAGE}
+              alt="Макро-съёмка ростков микрозелени с каплями росы"
+              className="w-full h-full object-cover will-change-transform"
+            />
+
+            {/* Dew drop behind "ему" that drips off the leaf */}
+            <div
+              className="absolute animate-dew-drip will-change-transform"
+              style={{ top: "54%", left: "50%" }}
+            >
+              <div className="animate-dew-breathe will-change-transform">
+                <div
+                  className="relative w-8 h-8 md:w-10 md:h-10 rounded-full"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95) 0%, rgba(210,255,220,0.45) 22%, rgba(130,210,160,0.32) 55%, rgba(50,110,75,0.4) 100%)",
+                    boxShadow:
+                      "0 2px 6px rgba(0,0,0,0.35), inset 0 0 6px rgba(255,255,255,0.25)",
+                  }}
+                >
+                  {/* Moving light reflection */}
+                  <div className="absolute top-1 left-1.5 w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/80 blur-[1px] animate-dew-shimmer will-change-transform" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/70 via-forest-deep/50 to-forest-deep" />
       </div>
 
@@ -35,7 +63,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] mb-8 text-glow"
+          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] mb-8 text-glow"
         >
           <span className="text-foreground">Живая энергия</span>
           <br />
